@@ -25,10 +25,19 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'store' %}">Store </a>
                     </li>               
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+
+                <div class="d-flex align-items-center me-4">
+                    <a href="#" class="btn btn-warning me-3">Login</a>
+                
+                    <div class="position-relative">
+                        <a href="{% url 'cart' %}">
+                            <img id="cart-icon" src="{% static 'images/cart.png' %}">
+                        </a>
+                        <span id="cart-total" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </div>
+                </div>                                
             </div>
         </div>
     </nav>
